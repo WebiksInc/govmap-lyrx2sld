@@ -1,3 +1,4 @@
 [submodule "bridge-style"]
-	path = bridge-style
-	url = git@github.com:camptocamp/bridge-style.git
+    path = bridge-style
+    url = https://github.com/WebiksInc/govmap-bridge-style.git
+    branch = govmap
