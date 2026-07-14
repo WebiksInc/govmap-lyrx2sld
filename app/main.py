@@ -34,6 +34,18 @@ class Lyrx(BaseModel):
 
 app = FastAPI()
 
+@app.get("/health")
+async def health_check():
+    """
+    Health check endpoint to verify the service is running.
+    """
+    return {"status": "ok", "message": "Service is running"}
+
+LOG = logging.getLogger("app")
+with open("config.yaml") as f:
+    config = yaml.load(f, Loader=yaml.FullLoader)
+    logging.config.dictConfig(config)
+
 LOG = logging.getLogger("app")
 with open("config.yaml") as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
