@@ -4,3 +4,4 @@ PyYAML==6.0.2
 requests==2.32.3
 # For debugging
 # pydevd_pycharm~=213.7172.25
+Pillow
